@@ -337,7 +337,7 @@ def train(
                         range=(-1, 1),
                     )
 
-            if i % 1000 == 0:
+            if i % 100 == 0:
                 torch.save(
                     {
                         "e": e_module.state_dict(),
@@ -364,7 +364,7 @@ if __name__ == "__main__":
     parser.add_argument("path", type=str, nargs="+")
     parser.add_argument("--path_aux", type=str)
     parser.add_argument("--iter", type=int, default=2000)
-    parser.add_argument("--batch", type=int, default=16)
+    parser.add_argument("--batch", type=int, default=4)
     parser.add_argument("--size", type=int, default=256)
     parser.add_argument("--r1", type=float, default=10)
     parser.add_argument("--cooccur_r1", type=float, default=1)
