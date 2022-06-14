@@ -337,7 +337,7 @@ def train(
                         range=(-1, 1),
                     )
 
-            if i % 1000 == 0:
+            if i % 2000 == 0:
                 torch.save(
                     {
                         "e": e_module.state_dict(),
