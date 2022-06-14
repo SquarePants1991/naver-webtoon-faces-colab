@@ -8,7 +8,7 @@ from torch.utils.data import Dataset
 class MultiResolutionDataset(Dataset):
     def __init__(self, path, transform, resolution=256):
         self.env = lmdb.open(
-            path,
+            "./train_data",
             max_readers=32,
             readonly=True,
             lock=False,
