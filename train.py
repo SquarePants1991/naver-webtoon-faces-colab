@@ -334,7 +334,7 @@ if __name__ == "__main__":
 
     parser.add_argument("path", type=str, nargs="+")
     parser.add_argument("--iter", type=int, default=800000)
-    parser.add_argument("--batch", type=int, default=16)
+    parser.add_argument("--batch", type=int, default=4)
     parser.add_argument("--size", type=int, default=256)
     parser.add_argument("--r1", type=float, default=10)
     parser.add_argument("--cooccur_r1", type=float, default=1)
