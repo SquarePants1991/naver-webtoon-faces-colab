@@ -211,7 +211,7 @@ def train(
         (d_loss + cooccur_loss).backward()
         d_optim.step()
 
-        d_regularize = i % args.d_reg_every == 0
+        d_regularize = i % args.d_reg_every == 0 or args.start_iter == i
 
         if d_regularize:
             real_img.requires_grad = True
