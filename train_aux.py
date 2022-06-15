@@ -337,7 +337,7 @@ def train(
                         range=(-1, 1),
                     )
 
-            if i % 100 == 0:
+            if i % 200 == 0:
                 torch.save(
                     {
                         "e": e_module.state_dict(),
@@ -350,7 +350,7 @@ def train(
                         "d_optim": d_optim.state_dict(),
                         "args": args,
                     },
-                    f"checkpoint/{str(i).zfill(6)}.pt",
+                    f"/content/drive/MyDrive/train_models/{str(i).zfill(6)}.pt",
                 )
 
 
