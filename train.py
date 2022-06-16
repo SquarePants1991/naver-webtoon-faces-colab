@@ -308,7 +308,7 @@ def train(
                         range=(-1, 1),
                     )
 
-            if i % 400 == 0:
+            if i % 500 == 0:
                 torch.save(
                     {
                         "e": e_module.state_dict(),
